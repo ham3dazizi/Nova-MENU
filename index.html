@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3b0710">
+<meta name="description" content="منوی دیجیتال کافه نووا - NOVA Takeaway">
+<title>NOVA | منوی کافه نووا</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --wine:#3b0710;
+  --wine2:#5b0d19;
+  --black:#10090a;
+  --cream:#f5ead8;
+  --gold:#d7ad63;
+  --muted:#cbbba5;
+  --line:rgba(215,173,99,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--cream);
+  font-family:Vazirmatn,Tahoma,sans-serif;
+  background:
+    radial-gradient(circle at 15% 12%,rgba(116,23,39,.42),transparent 30%),
+    radial-gradient(circle at 90% 35%,rgba(91,13,25,.28),transparent 32%),
+    linear-gradient(145deg,#0b0708 0%,#1a080d 45%,#0d0708 100%);
+  overflow-x:hidden;
+}
+body:before{
+  content:"☕  •  ◉  •  ☕  •  ◉  •  ☕";
+  position:fixed; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:clamp(70px,16vw,190px);
+  letter-spacing:30px;
+  line-height:2;
+  color:rgba(255,255,255,.018);
+  transform:rotate(-18deg) scale(1.2);
+  pointer-events:none;
+  z-index:-1;
+}
+.container{width:min(760px,100%);margin:auto;padding:18px 16px 34px}
+.hero{
+  position:relative; overflow:hidden;
+  padding:28px 22px 24px;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:
+    linear-gradient(135deg,rgba(91,13,25,.95),rgba(25,8,11,.96)),
+    #21090d;
+  box-shadow:0 18px 55px rgba(0,0,0,.38), inset 0 1px rgba(255,255,255,.05);
+}
+.hero:before{
+  content:"";
+  position:absolute; width:210px;height:210px;border-radius:50%;
+  left:-75px;top:-95px;
+  border:1px solid rgba(215,173,99,.18);
+  box-shadow:0 0 0 22px rgba(215,173,99,.035),0 0 0 44px rgba(215,173,99,.02);
+}
+.hero:after{
+  content:"☕";
+  position:absolute;left:18px;bottom:-32px;
+  font-size:150px;opacity:.055;transform:rotate(-12deg);
+}
+.brand{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+.logo{
+  width:58px;height:58px;border-radius:18px;display:grid;place-items:center;
+  border:1px solid rgba(215,173,99,.45);
+  background:rgba(0,0,0,.18);font-size:30px;
+  box-shadow:inset 0 0 20px rgba(215,173,99,.05);
+}
+.brand small{color:var(--gold);letter-spacing:3px;font-size:11px;font-weight:800}
+.brand h1{margin:2px 0 0;font-size:31px;line-height:1;font-weight:900;letter-spacing:1px}
+.hero-title{position:relative;z-index:1;margin:24px 0 6px;font-size:27px;font-weight:800}
+.hero p{position:relative;z-index:1;margin:0;color:var(--muted);font-size:13px}
+.beans{
+  display:flex;gap:7px;margin-top:19px;position:relative;z-index:1;
+}
+.bean{
+  width:18px;height:25px;border-radius:55% 45% 55% 45%;
+  background:linear-gradient(145deg,#d5a45b,#6d3a18);
+  transform:rotate(-28deg);
+  box-shadow:0 3px 8px rgba(0,0,0,.35);
+}
+.bean:after{content:"";display:block;width:2px;height:19px;background:rgba(60,20,7,.55);margin:3px auto;transform:rotate(20deg);border-radius:50%}
+.tabs{
+  position:sticky;top:0;z-index:10;
+  display:flex;gap:8px;overflow:auto;padding:12px 2px;
+  background:linear-gradient(to bottom,rgba(11,7,8,.98),rgba(11,7,8,.84),transparent);
+  scrollbar-width:none;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  flex:0 0 auto;border:1px solid var(--line);border-radius:999px;
+  color:var(--muted);background:rgba(42,12,17,.86);
+  padding:9px 15px;font:600 12px Vazirmatn;cursor:pointer;
+}
+.tab.active,.tab:hover{color:#1a0b0d;background:var(--gold);border-color:var(--gold)}
+.menu-section{margin-top:14px}
+.section-title{display:flex;align-items:center;gap:12px;margin:24px 4px 11px}
+.section-icon{
+  width:43px;height:43px;border-radius:15px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#6b101e,#2a080e);
+  border:1px solid var(--line);font-size:21px;
+}
+.eyebrow{font-size:9px;letter-spacing:2px;color:var(--gold);font-weight:800}
+.section-title h2{margin:0;font-size:20px}
+.items{display:grid;gap:9px}
+.item-card{
+  position:relative;display:flex;align-items:center;gap:12px;
+  padding:14px 13px;border:1px solid rgba(215,173,99,.15);
+  border-radius:18px;background:linear-gradient(110deg,rgba(47,12,18,.9),rgba(18,9,11,.82));
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+.item-card:before{
+  content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(215,173,99,.025),transparent);
+}
+.bean-dot{
+  flex:0 0 38px;width:38px;height:38px;border-radius:13px;
+  display:grid;place-items:center;color:var(--gold);
+  background:rgba(215,173,99,.07);border:1px solid rgba(215,173,99,.14);
+}
+.item-copy{min-width:0;flex:1}
+.item-copy h3{margin:0;font-size:15px;font-weight:700}
+.item-copy p{margin:4px 0 0;color:#a99580;font-size:10px;line-height:1.6}
+.price{white-space:nowrap;color:var(--gold);font-size:13px;font-weight:800}
+.price.small{font-size:11px;line-height:1.7;white-space:normal;text-align:left;max-width:110px}
+.footer{
+  margin-top:28px;padding:22px 18px;text-align:center;border-radius:23px;
+  border:1px solid var(--line);background:rgba(55,10,17,.55)
+}
+.footer .cup{font-size:34px}
+.footer strong{display:block;margin-top:5px;font-size:19px}
+.footer p{color:var(--muted);font-size:11px;margin:7px 0 12px}
+.instagram{
+  display:inline-flex;align-items:center;gap:7px;color:var(--gold);
+  text-decoration:none;font-size:12px;font-weight:800;
+  border:1px solid rgba(215,173,99,.28);border-radius:999px;padding:8px 14px
+}
+.note{font-size:9px;color:#806f61;margin-top:14px}
+@media(max-width:430px){
+  .container{padding:10px 11px 26px}
+  .hero{border-radius:23px;padding:23px 18px 21px}
+  .hero h1{font-size:28px}
+  .hero-title{font-size:23px}
+  .item-card{padding:13px 11px}
+  .item-copy h3{font-size:14px}
+}
+</style>
+</head>
+<body>
+<main class="container">
+  <header class="hero">
+    <div class="brand">
+      <div class="logo">☕</div>
+      <div><small>NOVA TAKEAWAY</small><h1>NOVA</h1></div>
+    </div>
+    <div class="hero-title">منوی کافه نووا</div>
+    <p>قهوه، عطر و حال خوب؛ تازه و با عشق آماده می‌شود.</p>
+    <div class="beans" aria-hidden="true">
+      <span class="bean"></span><span class="bean"></span><span class="bean"></span><span class="bean"></span><span class="bean"></span>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="دسته‌بندی منو">
+    <button class="tab active" data-target="espresso">☕ اسپرسو</button>
+    <button class="tab" data-target="hot">♨ نوشیدنی گرم</button>
+    <button class="tab" data-target="cold">❄ نوشیدنی سرد</button>
+  </nav>
+
+  <div id="espresso">
+
+    <section class="menu-section">
+      <div class="section-title">
+        <span class="section-icon">☕</span>
+        <div><span class="eyebrow">NOVA COFFEE</span><h2>اسپرسو</h2></div>
+      </div>
+      <div class="items">
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>۱۰۰٪ روبوستا</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">110 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>۵۰٪ عربیکا / ۵۰٪ روبوستا</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">140 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>۱۰۰٪ عربیکا</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">175 تومان</span>
+        </article>
+        </div>
+    </section>
+    
+  </div>
+  <div id="hot">
+
+    <section class="menu-section">
+      <div class="section-title">
+        <span class="section-icon">♨</span>
+        <div><span class="eyebrow">NOVA COFFEE</span><h2>نوشیدنی گرم</h2></div>
+      </div>
+      <div class="items">
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>آمریکانو</h3>
+            <p>۱۰۰٪ روبوستا: ۱۲۵ • ۵۰/۵۰: ۱۶۰ • عربیکا: ۲۰۰</p>
+          </div>
+          <span class="price small">۱۲۵ / ۱۶۰ / ۲۰۰</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>لته</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">230 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>کاپوچینو</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">220 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>ماسالا</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">180 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>هات چاکلت</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">190 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>چای کرک</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">200 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>لته زعفران پسته</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">220 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>لته کاراملی</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">210 تومان</span>
+        </article>
+        </div>
+    </section>
+    
+  </div>
+  <div id="cold">
+
+    <section class="menu-section">
+      <div class="section-title">
+        <span class="section-icon">❄</span>
+        <div><span class="eyebrow">NOVA COFFEE</span><h2>نوشیدنی سرد</h2></div>
+      </div>
+      <div class="items">
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>تونیک</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">270 تومان</span>
+        </article>
+        
+        <article class="item-card">
+          <div class="bean-dot" aria-hidden="true">✦</div>
+          <div class="item-copy">
+            <h3>افوگاتو</h3>
+            <p>تازه‌دم، سرو شده با کیفیت کافه نووا</p>
+          </div>
+          <span class="price">240 تومان</span>
+        </article>
+        </div>
+    </section>
+    
+  </div>
+
+  <footer class="footer">
+    <div class="cup">☕</div>
+    <strong>هر فنجان، یک حال خوب</strong>
+    <p>NOVA TAKEAWAY</p>
+    <a class="instagram" href="https://instagram.com/nova_takeaway" target="_blank" rel="noopener">◎ nova_takeaway</a>
+    <div class="note">قیمت‌ها به تومان هستند.</div>
+  </footer>
+</main>
+<script>
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.target).scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
