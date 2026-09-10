@@ -700,6 +700,55 @@ section{
   line-height:1.8;
 }
 
+/* ================= NEW MENU DETAILS ================= */
+
+.size-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  margin:-2px 0 9px;
+  padding:10px 14px;
+  border:1px solid rgba(211,165,92,.16);
+  border-radius:14px;
+  background:rgba(211,165,92,.035);
+  color:var(--gold2);
+  font-size:10px;
+  font-weight:800;
+  text-align:center;
+}
+
+.size-head span:first-child{
+  border-left:1px solid var(--line);
+}
+
+.espresso-note{
+  margin-top:11px;
+  border-color:rgba(211,165,92,.22);
+}
+
+.espresso-note .name{
+  color:var(--gold2);
+}
+
+.espresso-note .desc{
+  color:#b5a89e;
+}
+
+.espresso-note:before{
+  background:var(--gold);
+}
+
+@media(max-width:560px){
+  .espresso-grid .price{
+    font-size:13px;
+    letter-spacing:-.2px;
+  }
+
+  .feature-price{
+    font-size:14px;
+  }
+}
+
 /* ================= FOOTER ================= */
 
 footer{
@@ -948,16 +997,16 @@ footer{
       اسپرسو
     </a>
 
-    <a href="#coffee">
-      قهوه
-    </a>
-
-    <a href="#hot">
-      گرم
-    </a>
-
     <a href="#cold">
-      سرد
+      بار سرد
+    </a>
+
+    <a href="#powder">
+      پودری‌جات
+    </a>
+
+    <a href="#special">
+      آیتم‌های ویژه
     </a>
 
   </div>
@@ -969,294 +1018,187 @@ footer{
 <section id="espresso" class="reveal">
 
   <div class="section-head">
-
-    <span class="section-no">
-      01
-    </span>
-
-    <h2 class="section-title">
-      اسپرسو
-    </h2>
-
+    <span class="section-no">01</span>
+    <h2 class="section-title">منوی اسپرسو</h2>
     <div class="section-line"></div>
-
-    <span class="section-sub">
-      NOVA COFFEE
-    </span>
-
+    <span class="section-sub">ESPRESSO MENU</span>
   </div>
 
   <div class="feature">
-
-    <div class="feature-tag">
-      NOVA SIGNATURE
-    </div>
-
+    <div class="feature-tag">CHOOSE YOUR BEANS</div>
     <div class="feature-row">
-
       <div>
-
-        <div class="feature-name">
-          اسپرسو ۱۰۰٪ روبوستا
-        </div>
-
-        <div class="feature-desc">
-          قوی، تلخ و شکلاتی — انتخابی برای یک شات جدی
-        </div>
-
+        <div class="feature-name">سه انتخاب برای هر نوشیدنی</div>
+        <div class="feature-desc">روبوستا &nbsp;•&nbsp; ۵۰/۵۰ &nbsp;•&nbsp; عربیکا</div>
       </div>
-
-      <div class="feature-price">
-        ۱۱۰
-        <small>تومان</small>
-      </div>
-
+      <div class="feature-price">سه قیمت</div>
     </div>
-
   </div>
 
   <div class="espresso-grid">
 
     <article class="menu-card">
-
       <div class="item">
-
-        <div class="bean">
-          BLEND 50 / 50
-        </div>
-
-        <div class="name">
-          اسپرسو ۵۰٪ عربیکا<br>
-          ۵۰٪ روبوستا
-        </div>
-
-        <div class="desc">
-          متعادل و خوش‌عطر
-        </div>
-
+        <div class="bean">ROBUSTA &nbsp; / &nbsp; 50·50 &nbsp; / &nbsp; ARABICA</div>
+        <div class="name">اسپرسو</div>
+        <div class="desc">یک شات کلاسیک با انتخاب نوع دانه</div>
       </div>
-
-      <div class="price">
-        ۱۴۰
-        <small>تومان</small>
-      </div>
-
+      <div class="price">۱۳۰ / ۱۶۰ / ۱۹۰ <small>تومان</small></div>
     </article>
 
     <article class="menu-card">
-
       <div class="item">
-
-        <div class="bean">
-          PURE ARABICA
-        </div>
-
-        <div class="name">
-          اسپرسو<br>
-          ۱۰۰٪ عربیکا
-        </div>
-
-        <div class="desc">
-          عطر و طعم پیچیده‌تر
-        </div>
-
+        <div class="name">آمریکانو</div>
+        <div class="desc">اسپرسو و آب داغ</div>
       </div>
+      <div class="price">۱۴۰ / ۱۷۰ / ۲۰۰ <small>تومان</small></div>
+    </article>
 
-      <div class="price">
-        ۱۷۵
-        <small>تومان</small>
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">کورتادو</div>
+        <div class="desc">اسپرسو با مقدار متعادل شیر</div>
       </div>
+      <div class="price">۱۵۰ / ۱۸۰ / ۲۱۰ <small>تومان</small></div>
+    </article>
 
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">کاپوچینو</div>
+        <div class="desc">اسپرسو، شیر و فوم شیر</div>
+      </div>
+      <div class="price">۱۷۰ / ۱۹۰ / ۲۲۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">لاته</div>
+        <div class="desc">اسپرسو، شیر و فوم لطیف</div>
+      </div>
+      <div class="price">۱۸۰ / ۲۰۰ / ۲۳۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">موکا</div>
+        <div class="desc">ترکیب قهوه و شکلات</div>
+      </div>
+      <div class="price">۲۰۰ / ۲۲۰ / ۲۵۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">کارامل ماکیاتو</div>
+        <div class="desc">اسپرسو، شیر و کارامل</div>
+      </div>
+      <div class="price">۲۱۰ / ۲۳۰ / ۲۶۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">کن پانا <span dir="ltr">(Con Panna)</span></div>
+        <div class="desc">اسپرسو با خامه</div>
+      </div>
+      <div class="price">۲۴۰ / ۲۶۰ / ۲۹۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">آفوگاتو</div>
+        <div class="desc">اسپرسو و بستنی</div>
+      </div>
+      <div class="price">۱۸۰ / ۲۰۰ / ۲۳۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">رد آی – بلک آی</div>
+        <div class="desc">لقب: «قهوه‌ی صبح سخت» یا «قهوه‌ی دانشجویی»</div>
+      </div>
+      <div class="price">۲۳۰ / ۲۵۰ / ۲۷۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">ماروکینو <span dir="ltr">(Marocchino)</span></div>
+        <div class="desc">اسپرسو با شکلات و شیر</div>
+      </div>
+      <div class="price">۲۰۰ / ۲۲۰ / ۲۵۰ <small>تومان</small></div>
+    </article>
+
+    <article class="menu-card">
+      <div class="item">
+        <div class="name">کافه کوبانو <span dir="ltr">(Cuban Espresso)</span></div>
+        <div class="desc">اسپرسوی کوبایی با شیرینی ملایم</div>
+      </div>
+      <div class="price">۲۰۰ / ۲۲۰ / ۲۵۰ <small>تومان</small></div>
     </article>
 
   </div>
 
-</section>
-
-<!-- COFFEE -->
-
-<section id="coffee" class="reveal">
-
-  <div class="section-head">
-
-    <span class="section-no">
-      02
-    </span>
-
-    <h2 class="section-title">
-      قهوه
-    </h2>
-
-    <div class="section-line"></div>
-
-    <span class="section-sub">
-      CLASSICS
-    </span>
-
-  </div>
-
-  <div class="menu-card">
-
+  <div class="menu-card espresso-note">
     <div class="item">
-
-      <div class="name">
-        آمریکانو روبوستا
-      </div>
-
-      <div class="desc">
-        اسپرسو ۱۰۰٪ روبوستا
-      </div>
-
+      <div class="name">رسترتو یا لانگو؟</div>
+      <div class="desc">در صورت درخواست رسترتو یا لانگو، حتماً به باریستا اطلاع دهید.</div>
     </div>
-
-    <div class="price">
-      ۱۲۵
-      <small>تومان</small>
-    </div>
-
-  </div>
-
-  <div class="menu-card">
-
-    <div class="item">
-
-      <div class="name">
-        آمریکانو ۵۰/۵۰
-      </div>
-
-      <div class="desc">
-        ترکیب عربیکا و روبوستا
-      </div>
-
-    </div>
-
-    <div class="price">
-      ۱۶۰
-      <small>تومان</small>
-    </div>
-
-  </div>
-
-  <div class="menu-card">
-
-    <div class="item">
-
-      <div class="name">
-        آمریکانو عربیکا
-      </div>
-
-      <div class="desc">
-        اسپرسو ۱۰۰٪ عربیکا
-      </div>
-
-    </div>
-
-    <div class="price">
-      ۲۰۰
-      <small>تومان</small>
-    </div>
-
-  </div>
-
-  <div class="menu-card">
-
-    <div class="item">
-
-      <div class="name">
-        آفوگاتو
-      </div>
-
-      <div class="desc">
-        اسپرسو و بستنی
-      </div>
-
-    </div>
-
-    <div class="price">
-      ۲۴۰
-      <small>تومان</small>
-    </div>
-
   </div>
 
 </section>
 
-<!-- HOT -->
+<!-- POWDER -->
 
-<section id="hot" class="reveal">
+<section id="powder" class="reveal">
 
   <div class="section-head">
-
-    <span class="section-no">
-      03
-    </span>
-
-    <h2 class="section-title">
-      نوشیدنی گرم
-    </h2>
-
+    <span class="section-no">03</span>
+    <h2 class="section-title">پودری‌جات</h2>
     <div class="section-line"></div>
+    <span class="section-sub">POWDER DRINKS</span>
+  </div>
 
-    <span class="section-sub">
-      HOT DRINKS
-    </span>
-
+  <div class="size-head">
+    <span>۲۲۰ سی‌سی</span>
+    <span>۳۶۰ سی‌سی</span>
   </div>
 
   <div class="menu-card">
-    <div class="item">
-      <div class="name">لاته</div>
-      <div class="desc">اسپرسو، شیر و فوم شیر</div>
-    </div>
-    <div class="price">۲۳۰ <small>تومان</small></div>
+    <div class="item"><div class="name">ماسالا</div><div class="desc">گرم، معطر و ادویه‌ای</div></div>
+    <div class="price">۱۶۰ / ۲۱۰ <small>تومان</small></div>
   </div>
 
   <div class="menu-card">
-    <div class="item">
-      <div class="name">کاپوچینو</div>
-      <div class="desc">اسپرسو، شیر و فوم غلیظ</div>
-    </div>
-    <div class="price">۲۲۰ <small>تومان</small></div>
+    <div class="item"><div class="name">کاپوچینو پودری</div></div>
+    <div class="price">۱۶۰ / ۲۱۰ <small>تومان</small></div>
   </div>
 
   <div class="menu-card">
-    <div class="item">
-      <div class="name">ماسالا</div>
-      <div class="desc">گرم، معطر و ادویه‌ای</div>
-    </div>
-    <div class="price">۱۸۰ <small>تومان</small></div>
+    <div class="item"><div class="name">هات چاکلت</div><div class="desc">شکلاتی و غلیظ</div></div>
+    <div class="price">۱۹۰ / ۲۴۰ <small>تومان</small></div>
   </div>
 
   <div class="menu-card">
-    <div class="item">
-      <div class="name">هات چاکلت</div>
-      <div class="desc">شکلاتی و غلیظ</div>
-    </div>
-    <div class="price">۱۹۰ <small>تومان</small></div>
+    <div class="item"><div class="name">وایت چاکلت</div></div>
+    <div class="price">۱۷۰ / ۲۲۰ <small>تومان</small></div>
   </div>
 
   <div class="menu-card">
-    <div class="item">
-      <div class="name">چای کرک</div>
-      <div class="desc">چای شیرین و معطر</div>
-    </div>
-    <div class="price">۲۰۰ <small>تومان</small></div>
+    <div class="item"><div class="name">پینک چاکلت</div></div>
+    <div class="price">۱۹۰ / ۲۴۰ <small>تومان</small></div>
   </div>
 
   <div class="menu-card">
-    <div class="item">
-      <div class="name">لاته زعفران پسته</div>
-      <div class="desc">لاته با عطر زعفران و پسته</div>
-    </div>
-    <div class="price">۲۲۰ <small>تومان</small></div>
+    <div class="item"><div class="name">لاته کاراملی</div></div>
+    <div class="price">۱۷۰ / ۲۲۰ <small>تومان</small></div>
   </div>
 
   <div class="menu-card">
-    <div class="item">
-      <div class="name">کارامل لاته</div>
-      <div class="desc">لاته با طعم کارامل</div>
-    </div>
-    <div class="price">۲۱۰ <small>تومان</small></div>
+    <div class="item"><div class="name">لاته پسته زعفران</div></div>
+    <div class="price">۱۹۰ / ۲۴۰ <small>تومان</small></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="item"><div class="name">کرک هل</div></div>
+    <div class="price">۱۷۰ / ۲۲۰ <small>تومان</small></div>
   </div>
 
 </section>
@@ -1266,50 +1208,81 @@ footer{
 <section id="cold" class="reveal">
 
   <div class="section-head">
-
-    <span class="section-no">
-      04
-    </span>
-
-    <h2 class="section-title">
-      نوشیدنی سرد
-    </h2>
-
+    <span class="section-no">02</span>
+    <h2 class="section-title">بار سرد</h2>
     <div class="section-line"></div>
+    <span class="section-sub">COLD BAR</span>
+  </div>
 
-    <span class="section-sub">
-      COLD DRINKS
-    </span>
+  <div class="menu-card">
+    <div class="item"><div class="name">آیس اسپرسو</div></div>
+    <div class="price">۱۴۰ / ۱۷۰ / ۲۰۰ <small>تومان</small></div>
+  </div>
 
+  <div class="menu-card">
+    <div class="item"><div class="name">آیس آمریکانو</div></div>
+    <div class="price">۱۵۰ / ۱۸۰ / ۲۱۰ <small>تومان</small></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="item"><div class="name">آیس لاته</div></div>
+    <div class="price">۱۹۰ / ۲۱۰ / ۲۴۰ <small>تومان</small></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="item"><div class="name">آیس موکا</div></div>
+    <div class="price">۲۱۰ / ۲۴۰ / ۲۷۰ <small>تومان</small></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="item"><div class="name">آیس کارامل ماکیاتو</div></div>
+    <div class="price">۲۲۰ / ۲۴۰ / ۲۷۰ <small>تومان</small></div>
   </div>
 
   <div class="feature">
-
-    <div class="feature-tag">
-      SIGNATURE COLD
-    </div>
-
+    <div class="feature-tag">NOVA SIGNATURE</div>
     <div class="feature-row">
-
       <div>
-
-        <div class="feature-name">
-          تونیک
-        </div>
-
-        <div class="feature-desc">
-          خنک، متفاوت و مناسب یک حال خوب
-        </div>
-
+        <div class="feature-name">آیس تونیک</div>
+        <div class="feature-desc">خنک، متفاوت و مناسب یک حال خوب</div>
       </div>
-
-      <div class="feature-price">
-        ۲۷۰
-        <small>تومان</small>
-      </div>
-
+      <div class="feature-price">۲۱۰ / ۲۴۰ / ۲۷۰ <small>تومان</small></div>
     </div>
+  </div>
 
+</section>
+
+<!-- SPECIAL -->
+
+<section id="special" class="reveal">
+
+  <div class="section-head">
+    <span class="section-no">04</span>
+    <h2 class="section-title">آیتم‌های ویژه</h2>
+    <div class="section-line"></div>
+    <span class="section-sub">SPECIAL</span>
+  </div>
+
+  <div class="feature">
+    <div class="feature-tag">NOVA SPECIAL</div>
+    <div class="feature-row">
+      <div>
+        <div class="feature-name">چای کمرباریک</div>
+        <div class="feature-desc">سرو ویژه نووا</div>
+      </div>
+      <div class="feature-price">۲۵ <small>تومان</small></div>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-tag">SPECIAL BREW</div>
+    <div class="feature-row">
+      <div>
+        <div class="feature-name">دله</div>
+        <div class="feature-desc">قهوه به سبک دله</div>
+      </div>
+      <div class="feature-price">۱۳۰ <small>تومان</small></div>
+    </div>
   </div>
 
 </section>
