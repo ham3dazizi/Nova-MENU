@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NOVA | منوی کافه</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0b0b0b;
+    --card:#141414;
+    --card2:#181818;
+    --red:#8f1728;
+    --red-light:#b52a3d;
+    --cream:#f1e8dc;
+    --muted:#9c948d;
+    --border:rgba(255,255,255,.08);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    radial-gradient(circle at 50% -10%, rgba(143,23,40,.28), transparent 38%),
+    var(--bg);
+    color:var(--cream);
+    font-family:"Vazirmatn",sans-serif;
+    min-height:100vh;
+}
+
+.container{
+    width:min(680px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:55px 0 28px;
+}
+
+.logo{
+    font-family:Georgia,serif;
+    font-size:52px;
+    letter-spacing:8px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.logo-line{
+    width:48px;
+    height:2px;
+    background:var(--red-light);
+    margin:13px auto 15px;
+}
+
+.subtitle{
+    color:var(--muted);
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+/* NAV */
+
+.nav{
+    position:sticky;
+    top:0;
+    z-index:20;
+    padding:12px 0;
+    background:rgba(11,11,11,.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.nav-inner::-webkit-scrollbar{
+    display:none;
+}
+
+.nav a{
+    flex:0 0 auto;
+    text-decoration:none;
+    color:#aaa;
+    border:1px solid var(--border);
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:12px;
+    transition:.25s;
+}
+
+.nav a:hover{
+    color:white;
+    border-color:var(--red-light);
+    background:rgba(143,23,40,.18);
+}
+
+/* SECTION */
+
+section{
+    padding:38px 0 5px;
+}
+
+.section-head{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:17px;
+}
+
+.section-number{
+    color:var(--red-light);
+    font-size:12px;
+    font-weight:700;
+}
+
+.section-title{
+    font-size:21px;
+    font-weight:700;
+}
+
+.section-line{
+    height:1px;
+    background:var(--border);
+    flex:1;
+}
+
+/* CARDS */
+
+.menu-card{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:18px 18px;
+    margin-bottom:10px;
+    background:linear-gradient(135deg,var(--card),var(--card2));
+    border:1px solid var(--border);
+    border-radius:15px;
+    transition:.25s;
+    overflow:hidden;
+}
+
+.menu-card::before{
+    content:"";
+    position:absolute;
+    right:0;
+    top:0;
+    width:2px;
+    height:100%;
+    background:var(--red);
+    opacity:.65;
+}
+
+.menu-card:hover{
+    transform:translateY(-2px);
+    border-color:rgba(181,42,61,.35);
+}
+
+.info{
+    min-width:0;
+}
+
+.name{
+    font-size:15px;
+    font-weight:600;
+    color:#f4eee8;
+    margin-bottom:4px;
+}
+
+.desc{
+    font-size:11px;
+    color:#827b75;
+}
+
+.price{
+    flex-shrink:0;
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.price span{
+    font-size:10px;
+    color:#9c948d;
+    font-weight:400;
+    margin-right:3px;
+}
+
+/* SPECIAL ESPRESSO */
+
+.espresso-card{
+    background:
+    linear-gradient(135deg,rgba(143,23,40,.22),rgba(20,20,20,.95));
+    border-color:rgba(181,42,61,.25);
+}
+
+.espresso-card .price{
+    color:#e4a3ad;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:65px 0 35px;
+}
+
+.footer-logo{
+    font-family:Georgia,serif;
+    letter-spacing:5px;
+    font-size:25px;
+    color:white;
+}
+
+.footer-line{
+    width:35px;
+    height:1px;
+    background:var(--red-light);
+    margin:12px auto;
+}
+
+.footer-text{
+    color:#706a65;
+    font-size:11px;
+    margin-bottom:18px;
+}
+
+.instagram{
+    display:inline-block;
+    color:#c8beb5;
+    text-decoration:none;
+    border:1px solid var(--border);
+    padding:9px 18px;
+    border-radius:30px;
+    font-size:12px;
+    transition:.25s;
+}
+
+.instagram:hover{
+    border-color:var(--red-light);
+    color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    header{
+        padding-top:42px;
+    }
+
+    .logo{
+        font-size:44px;
+        letter-spacing:7px;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .menu-card{
+        padding:16px;
+    }
+
+    .name{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <div class="logo">NOVA</div>
+    <div class="logo-line"></div>
+    <div class="subtitle">TAKEAWAY COFFEE</div>
+</header>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#espresso">اسپرسو</a>
+        <a href="#coffee">قهوه</a>
+        <a href="#cold">سرد</a>
+        <a href="#hot">گرم</a>
+    </div>
+</nav>
+
+
+<!-- ESPRESSO -->
+
+<section id="espresso">
+
+    <div class="section-head">
+        <span class="section-number">01</span>
+        <h2 class="section-title">اسپرسو</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="menu-card espresso-card">
+        <div class="info">
+            <div class="name">اسپرسو ۱۰۰٪ روبوستا</div>
+            <div class="desc">قوی، تلخ و شکلاتی</div>
+        </div>
+        <div class="price">۱۱۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card espresso-card">
+        <div class="info">
+            <div class="name">اسپرسو ۵۰٪ عربیکا / ۵۰٪ روبوستا</div>
+            <div class="desc">متعادل و خوش‌عطر</div>
+        </div>
+        <div class="price">۱۴۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card espresso-card">
+        <div class="info">
+            <div class="name">اسپرسو ۱۰۰٪ عربیکا</div>
+            <div class="desc">عطر و طعم پیچیده‌تر</div>
+        </div>
+        <div class="price">۱۷۵ <span>تومان</span></div>
+    </div>
+
+</section>
+
+
+<!-- COFFEE -->
+
+<section id="coffee">
+
+    <div class="section-head">
+        <span class="section-number">02</span>
+        <h2 class="section-title">قهوه</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">آمریکانو روبوستا</div>
+            <div class="desc">اسپرسو ۱۰۰٪ روبوستا</div>
+        </div>
+        <div class="price">۱۲۵ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">آمریکانو ۵۰/۵۰</div>
+            <div class="desc">ترکیب عربیکا و روبوستا</div>
+        </div>
+        <div class="price">۱۶۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">آمریکانو عربیکا</div>
+            <div class="desc">اسپرسو ۱۰۰٪ عربیکا</div>
+        </div>
+        <div class="price">۲۰۰ <span>تومان</span></div>
+    </div>
+
+</section>
+
+
+<!-- COLD -->
+
+<section id="cold">
+
+    <div class="section-head">
+        <span class="section-number">03</span>
+        <h2 class="section-title">نوشیدنی سرد</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">تونیک</div>
+            <div class="desc">خنک و متفاوت</div>
+        </div>
+        <div class="price">۲۷۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">آفوگاتو</div>
+            <div class="desc">اسپرسو و بستنی</div>
+        </div>
+        <div class="price">۲۴۰ <span>تومان</span></div>
+    </div>
+
+</section>
+
+
+<!-- HOT -->
+
+<section id="hot">
+
+    <div class="section-head">
+        <span class="section-number">04</span>
+        <h2 class="section-title">نوشیدنی گرم</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">لاته</div>
+            <div class="desc">اسپرسو، شیر و فوم شیر</div>
+        </div>
+        <div class="price">۲۳۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">کاپوچینو</div>
+            <div class="desc">اسپرسو، شیر و فوم غلیظ</div>
+        </div>
+        <div class="price">۲۲۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">ماسالا</div>
+            <div class="desc">گرم و ادویه‌ای</div>
+        </div>
+        <div class="price">۱۸۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">هات چاکلت</div>
+            <div class="desc">شکلاتی و غلیظ</div>
+        </div>
+        <div class="price">۱۹۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">چای کرک</div>
+            <div class="desc">چای شیرین و معطر</div>
+        </div>
+        <div class="price">۲۰۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">لاته زعفران پسته</div>
+            <div class="desc">لاته با عطر زعفران و پسته</div>
+        </div>
+        <div class="price">۲۲۰ <span>تومان</span></div>
+    </div>
+
+    <div class="menu-card">
+        <div class="info">
+            <div class="name">کارامل لاته</div>
+            <div class="desc">لاته با طعم کارامل</div>
+        </div>
+        <div class="price">۲۱۰ <span>تومان</span></div>
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-logo">NOVA</div>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-text">
+        TAKEAWAY COFFEE
+    </div>
+
+    <a class="instagram"
+       href="https://instagram.com/nova_takeaway"
+       target="_blank">
+       @nova_takeaway
+    </a>
+
+</footer>
+
+</div>
+
+</body>
+</html>
